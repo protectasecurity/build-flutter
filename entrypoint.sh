@@ -23,7 +23,7 @@ function main() {
 
     flutter pub get && \
     flutter build ${INPUT_TYPE} ${INPUT_PARAMS} && \
-    cp -R build/${INPUT_TYPE} /dist
+    cp -R build/${INPUT_TYPE} ${GITHUB_WORKSPACE}/dist
 
     exitCode=${?}
 
