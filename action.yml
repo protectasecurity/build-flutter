@@ -1,0 +1,17 @@
+name: 'Flutter GitHub Actions'
+branding:
+  icon: 'terminal'
+  color: 'orange'
+inputs:
+  type:
+    description: 'Flutter build type. Example: web'
+    required: true
+  params:
+    description: 'Flutter build params'
+    required: false
+  workspace:
+    description: 'Relative path under $GITHUB_WORKSPACE to place the project'
+    required: false
+runs:
+  using: 'docker'
+  image: './Dockerfile'
