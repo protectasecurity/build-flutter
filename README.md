@@ -8,7 +8,7 @@ Flutter GitHub Actions allows you to build flutter projects
 on: [push]
 
 jobs:
-  cevixe:
+  flutter:
     runs-on: ubuntu-latest
     environment: develop
     steps:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build
-        uses: protectasecurity/build-flutter@v1
+        uses: protectasecurity/build-flutter
         with:
           type: 'web'
           params: '--dart-define=ENVIRONMENT=DEV --web-renderer canvaskit --release'
