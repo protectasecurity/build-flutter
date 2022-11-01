@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build
-        uses: protectasecurity/build-flutter
+        uses: protectasecurity/build-flutter@v1
         with:
           type: 'web'
           params: '--dart-define=ENVIRONMENT=DEV --web-renderer canvaskit --release'
