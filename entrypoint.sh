@@ -28,7 +28,7 @@ function main() {
     exitCode=${?}
 
     set +o pipefail
-    echo ::set-output name=status::${exitCode}
+    echo "status=${exitCode}" >> $GITHUB_OUTPUT
 
     if [ "${exitCode}" != "0" ]; then
         echo "Flutter build has failed. See above console output for more details."
